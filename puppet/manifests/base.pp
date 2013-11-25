@@ -119,23 +119,23 @@ Database {
 #}
 
 # PostgreSQL
-class { 'postgresql':
-  run_initdb => true,
-}->
-class { 'postgresql::server':
-  config_hash => {
-    'listen_addresses'           => '*',
-    'postgres_password'          => '',
-  },
-}
-postgresql::pg_hba_rule { 'Allow application network to access app database':
-  description => "Open up postgresql for access from 127.0.0.1/32",
-  type => 'host',
-  database => 'all',
-  user => 'all',
-  address => '127.0.0.1/32',
-  auth_method => 'md5',
-}
+#class { 'postgresql':
+#  run_initdb => true,
+#}->
+#class { 'postgresql::server':
+#  config_hash => {
+#    'listen_addresses'           => '*',
+#    'postgres_password'          => '',
+#  },
+#}
+#postgresql::pg_hba_rule { 'Allow application network to access app database':
+#  description => "Open up postgresql for access from 127.0.0.1/32",
+#  type => 'host',
+#  database => 'all',
+#  user => 'all',
+#  address => '127.0.0.1/32',
+#  auth_method => 'md5',
+#}
 
 $additional_mysql_packages = [ "mysql-devel", "mysql-libs" ]
 package { $additional_mysql_packages: ensure => present }
@@ -150,7 +150,7 @@ php::ini {
 }
 include php::cli
 include php::mod_php5
-php::module { [ 'devel', 'pear', 'mcrypt', 'pgsql', 'mbstring', 'xml', 'gd', 'tidy', 'pecl-memcache', 'pecl-imagick', 'pecl-xdebug', 'pecl-redis']: }
+php::module { [ 'devel', 'pear', 'mcrypt', 'mbstring', 'xml', 'gd', 'tidy', 'pecl-memcache', 'pecl-imagick', 'pecl-xdebug', 'pecl-redis']: }
 php::zend::ini { 'pecl-xdebug':
     settings => {
         'xdebug.remote_enable'      => 'on',
