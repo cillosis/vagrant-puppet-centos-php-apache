@@ -35,6 +35,7 @@ Vagrant::Config.run do |config|
   config.vm.share_folder "v-www", 	"/www",		"./shared/www", 	:mount_options => ["dmode=777", "fmode=777"]
   config.vm.share_folder "v-logs", 	"/logs",	"./shared/logs",	:mount_options => ["dmode=777", "fmode=777"]
 
+  # Run Puppet
   config.vm.provision :puppet,
     :options => ["--fileserverconfig=fileserver.conf"],
     :facter => { "fqdn" => "vagrant.vagrantup.com" }  do |puppet|
