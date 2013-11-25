@@ -1,7 +1,7 @@
 vagrant-puppet-centos-php-apache
 =========================
 
-```Originally developed by iJoyCode (https://github.com/iJoyCode/). Thank you for your hardwork!```
+> Originally developed by iJoyCode (https://github.com/iJoyCode/). Thank you for your hardwork!
 
 Vagrant VM with CentOS (SandBox for PHP Development)
 
