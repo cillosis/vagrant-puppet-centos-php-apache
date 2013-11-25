@@ -16,7 +16,7 @@ Installed:
 - openjdk
 - PHPUnit
 - Memcache
-- PostgreSQL
+- ~~PostgreSQL~~ (commented out by [cillosis](https://github.com/cillosis))
 - Node.js (npm, nodemon, grunt.js)
 - CURL (added by [cillosis](https://github.com/cillosis))
 - Composer (added by [cillosis](https://github.com/cillosis))
