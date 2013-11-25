@@ -227,3 +227,11 @@ package {'nodemon':
     provider => 'npm',
     require  => Package['npm'],
 }
+
+# CURL installation
+class { 'curl': }
+include curl
+
+# Composer installation
+class { 'composer': }
+include composer
