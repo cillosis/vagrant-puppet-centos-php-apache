@@ -1,7 +1,7 @@
 vagrant-puppet-centos-php-apache
 =========================
 
-Originally developed by iJoyCode (https://github.com/iJoyCode/). Thank you for your hardwork!
+```Originally developed by iJoyCode (https://github.com/iJoyCode/). Thank you for your hardwork!```
 
 Vagrant VM with CentOS (SandBox for PHP Development)
 
@@ -18,4 +18,6 @@ Installed:
 - Memcache
 - PostgreSQL
 - Node.js (npm, nodemon, grunt.js)
+- CURL (added by [cillosis](https://github.com/cillosis))
+- Composer (added by [cillosis](https://github.com/cillosis))
 - other (git, zip, telnet ...)
