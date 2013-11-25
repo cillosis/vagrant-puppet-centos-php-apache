@@ -39,7 +39,7 @@ class iptables {
 		mode    => 600,
 		replace => true,
 		ensure  => present,
-		source  => "/vagrant/files/iptables.txt",
+		source  => "/vagrant/puppet/files/iptables.txt",
 		require => Package["iptables"],
 		notify  => Service["iptables"],
 	}
@@ -150,7 +150,7 @@ php::ini {
 }
 include php::cli
 include php::mod_php5
-php::module { [ 'devel', 'pear', 'pgsql', 'mbstring', 'xml', 'gd', 'tidy', 'pecl-memcache', 'pecl-imagick', 'pecl-xdebug', 'pecl-redis']: }
+php::module { [ 'devel', 'pear', 'mcrypt', 'pgsql', 'mbstring', 'xml', 'gd', 'tidy', 'pecl-memcache', 'pecl-imagick', 'pecl-xdebug', 'pecl-redis']: }
 php::zend::ini { 'pecl-xdebug':
     settings => {
         'xdebug.remote_enable'      => 'on',

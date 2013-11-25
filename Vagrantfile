@@ -39,8 +39,8 @@ Vagrant::Config.run do |config|
   config.vm.provision :puppet,
     :options => ["--fileserverconfig=fileserver.conf"],
     :facter => { "fqdn" => "vagrant.vagrantup.com" }  do |puppet|
-       puppet.manifests_path = "manifests"
+       puppet.manifests_path = "puppet/manifests"
        puppet.manifest_file = "base.pp"
-       puppet.module_path = "modules"
+       puppet.module_path = "puppet/modules"
   end
 end
