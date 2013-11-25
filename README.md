@@ -20,4 +20,5 @@ Installed:
 - Node.js (npm, nodemon, grunt.js)
 - CURL (added by [cillosis](https://github.com/cillosis))
 - Composer (added by [cillosis](https://github.com/cillosis))
+- Codeception (added by [cillosis](https://github.com/cillosis))
 - other (git, zip, telnet ...)
