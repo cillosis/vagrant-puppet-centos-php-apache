@@ -235,3 +235,7 @@ include curl
 # Composer installation
 class { 'composer': }
 include composer
+
+# Codeception installation
+class { 'codeception': }
+include codeception
