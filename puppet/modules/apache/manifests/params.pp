@@ -27,7 +27,7 @@ class apache::params {
   $auth          = false
   $redirect_ssl  = false
   $options       = 'Indexes FollowSymLinks MultiViews'
-  $override      = 'None'
+  $override      = 'All'
   $vhost_name    = '*'
 
   if $::osfamily == 'redhat' or $::operatingsystem == 'amazon' {
